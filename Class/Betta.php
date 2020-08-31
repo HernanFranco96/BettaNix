@@ -6,6 +6,21 @@
         private $betColor;
         private $betSexo;
 
+        public function listarBettas()
+        {
+                $link = Conexion::conectar();
+
+                $sql = "SELECT Clase, Color, Sexo
+                        FROM betta";
+
+                $stmt = $link->prepare($sql);
+                $stmt->execute();
+
+                $betta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                return $betta;
+
+        }
+
         public function ingresarBetta()
         {
                 $betClase = $_POST['betClase'];

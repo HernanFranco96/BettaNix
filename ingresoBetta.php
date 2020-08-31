@@ -18,7 +18,6 @@
 ?>
 
     <main class="container w-50">
-        <h1>Ingreso de un Betta</h1>
 
         <div class="alert alert-<?= $css ?> p-4">
             <?= $mensaje ?>
